@@ -1,0 +1,62 @@
+<table style="width: 100%">
+  <tr>
+    <td style="text-align: left !important">
+      <h2>End all Services</h2>
+    </td>
+    <td style="text-align: right !important">
+      <h5>Stakeholder Number: 1234567</h5>
+    </td>
+  </tr>
+</table>
+
+<!-- Secondary Navigation -->
+<div style="max-width: 100%;">
+  <nav class="prsb-secondary-nav">
+    <ul>
+      <li style="width: 28%; text-align: center;"><a routerLink="/service-requestor-details-page">Service Requestor Details</a></li>
+      <li style="width: 20%; text-align: center;"><a routerLink="/manage-services-details-page">Manage Services</a></li>
+      <li style="width: 20%; text-align: center;"><a routerLink="/add-a-service-page">Add a Service</a></li>
+      <li style="width: 20%; text-align: center;"><a routerLink="/delete-a-service-page">Delete a Service</a></li>
+    </ul>
+  </nav>
+</div>
+<span>&nbsp;</span>
+
+<!-- Service Select -->
+<table class="esea-display-table prsb-detail-table">
+  <tr>
+    <!-- Populated with stakeholders active services -->
+    <td><h4>Services:</h4></td>
+    <td colspan="3" style="padding-top:1rem !important;">
+      <select name="services" id="services" disabled="disabled" readonly="readonly">
+        <option>HCV</option>
+      </select>
+    </td>
+  </tr>
+
+  <!-- End Service options -->
+  <tbody style="border: 0.5pt solid rgb(180, 180, 180);">
+    <tr>
+      <td><h5>End Date:</h5></td>
+      <td style="padding-top:1rem !important;"><input type="date"></td>
+      <td><h5>End Reason:</h5></td>
+      <td style="padding-top:1rem !important;">
+        <select name="endReason" id="endReason">
+          <option selected>Please Select an End Reason (Select here to clear options)</option>
+          <option value="T01">TERMINATED - ENROLLED IN ERROR</option>
+          <option value="T02">TERMINATED - NO LONGER ACTIVE ON CPDB</option>
+          <option value="T03">TERMINATED - NO LONGER AUTHORIZED FOR E-ACCESS</option>
+          <option value="T04">TERMINATED - NO LONGER AUTHORIZED FOR SERVICE</option>
+          <option value="T05">TERMINATED - CLOSED</option>
+        </select>
+      </td>
+    </tr>
+  </tbody>
+  <span>&nbsp;</span>
+  <tr>
+   <td colspan="4" > <button>End Services</button> </td>
+  </tr>
+</table>
+
+
+

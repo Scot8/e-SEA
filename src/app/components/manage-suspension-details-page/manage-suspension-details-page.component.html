@@ -1,0 +1,108 @@
+<table style="width: 100%">
+  <tr>
+    <td style="text-align: left !important">
+      <h2>Manage Suspensions</h2>
+    </td>
+    <td style="text-align: right !important">
+      <h5>Stakeholder Number: 1234567</h5>
+    </td>
+  </tr>
+</table>
+
+<!-- Secondary Navigation -->
+<div style="max-width: 100%;">
+  <nav class="prsb-secondary-nav">
+    <ul>
+      <li><a routerLink="/service-user-details-page">Service User Details</a></li>
+    </ul>
+  </nav>
+</div>
+<span>&nbsp;</span>
+
+<!-- Service Select -->
+<table class="esea-display-table prsb-detail-table" style="width: 100%;">
+
+  <!-- Service Details -->
+  <tbody style="border: 0.5pt solid rgb(180, 180, 180);">
+    <tr>
+      <td><h5>Service:</h5></td>
+      <td style="padding-top:1rem !important;">
+        <select name="services" id="services">
+          <option selected>Please Select A Service</option>
+          <option value="01">CLIENT VERIFICATION</option>
+          <option value="02">ADDRESS UPDATE</option>
+          <option value="03">RECOVERED CARD</option>
+          <option value="04">HCC - VERIFICATION</option>
+          <option value="06">ENROLMENT TO SERVICES</option>
+          <option value="07">HEALTH DATA VERIFICATION</option>
+          <option value="08">ORGAN DONOR STATUS</option>
+          <option value="09">ORGAN DONOR UPDATE</option>
+          <option value="10">MC EDT SERVICE (UPLOAD/DOWNLOAD)</option>
+          <option value="11">EDT UPLOAD DOWNLOAD</option>
+          <option value="12">EDT WEB SERVICE</option>
+          <option value="13">EDT2 INBOUND</option>
+          <option value="14">EDT2 OUTBOUND</option>
+          <option value="15">EARMS</option>
+          <option value="16">NHTG FILE TRANSFER</option>
+          <option value="17">RESOURCE PROCESSOR</option>
+          <option value="18">EDT UTILITY SERVICE</option>
+          <option value="19">EDT PERMISSIONS</option>
+          <option value="20">EDT ADMIN</option>
+          <option value="21">PHC PERFORMANCE REPORTING WEB SERVICE</option>
+          <option value="22">PHC PERFORMANCE REPORTING SFTP SERVICE</option>
+          <option value="23">SFTP SECURITY SERVICE</option>
+          <option value="24">RPDB ADVANCED SEARCH (RPAS)</option>
+          <option value="25">EBS</option>
+          <option value="26">SO INTEGRATED ADDRESS CHANGE VERIFICATION</option>
+          <option value="27">SO INTEGRATED ADDRESS CHANGE UPDATE</option>
+          <option value="28">SO INTEGRATED ADDRESS CHANGE - RECONCILIATION</option>
+          <option value="29">SO INTEGRATED ADDRESS CHANGE - COMMON AUTH SERVICE</option>
+          <option value="30">ODR DATAPOWER PROXY</option>
+          <option value="31">SECURE DRUG DATA TRANSFER SERVICE</option>
+          <option value="32">COMMON SFTP SERVICE</option>
+          <option value="33">HSC WEB SERVICES - COMMON AUTH SERVICE ON DATAPOWER APP TIER</option>
+          <option value="34">PROVIDER VALIDATION SERVICE - DATAPOWER APP TIER</option>
+          <option value="35">ESUB</option>
+          <option value="36">HEALTH NETWORK SYSTEMS COMMON AUTH SERVICE</option>
+          <option value="37">SPECIAL AUTHORIZATION DIGITAL INFORMATION EXCHANGE</option>
+          <option value="41">EXTRA DATA FOR PROVIDERS WEB SERVICE</option>
+          <option value="42">OHCR SERVICE VERIFICATION VIA WEB</option>
+          <option value="43">OHCR SERVICE ELIGIBILITY VIA WEB</option>
+          <option value="44">OHCR HEALTH CARD RENEWAL(UPDATE) VIA WEB</option>
+          <option value="45">HEALTH NUMBER INQUIRY SERVICE</option>
+          <option value="46">EBSE SESSION DETAILS WEB SERVICE</option>
+          <option value="47">MOH SERVICE VERIFICATION VIA WEB</option>
+          <option value="48">POSTAL CODE CHECK WEB SERVICE</option>
+          <option value="49">CLAIMS DATA ENTRY</option>
+          <option value="50">DATE OF BIRTH CHECK WEB SERVICE</option>
+          <option value="51">HEALTH CARD INFORMATION CHECK WEB SERVICE</option>
+          <option value="52">FAX PROXY WEB SERVICE</option>
+          <option value="53">OLIS-VIEWER APPLICATION SERVICE TYPE CODE</option>
+          <option value="54">ADP FAX PROXY</option>
+          <option value="55">DIGITAL IDENTIFICATION VERIFICATION SERVICE</option>
+          <option value="56">PRNE VERIFICATION WEB SERVICE</option>
+          <option value="57">COVAXON PATIENT PORTAL</option>
+          <option value="58">HEALTH NUMBER LOOKUP (HNLU) VIA RPI</option>
+          <option value="59">REGISTRATION INFO TRACKING SYSTEM (RITS)</option>
+          <option value="99">EBSE PARALLEL TEST ONLY SERVICE</option>
+        </select>
+      </td>
+      <td style="width:10%;"><h5>Suspension Reason:</h5></td>
+      <td style="padding-top:1rem !important;">
+        <select name="endReason" id="endReason">
+          <option selected>Please Select an End Reason (Select to clear options)</option>
+          <option value="S01">SUSPENDED - INAPPROPRIATE USE OF SERVICE</option>
+          <option value="S02">SUSPENDED - NOT ELIGIBLE FOR SERVICE</option>
+        </select>
+      </td>
+    </tr>
+
+  </tbody>
+  <span>&nbsp;</span>
+  <tr>
+   <td colspan="4" > <button>Suspend</button> </td>
+  </tr>
+</table>
+
+
+

@@ -1,0 +1,35 @@
+.esea-nav{
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width:100%;
+}
+
+.esea-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+.esea-nav li {
+  float: left;
+}
+
+.esea-nav li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.esea-nav li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.esea-breadcrumb {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+

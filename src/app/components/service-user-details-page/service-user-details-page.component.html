@@ -1,0 +1,61 @@
+<h2>Service User Information</h2>
+
+<!-- Secondary Navigation -->
+<div style="width: 30rem; max-width: 100%;">
+  <nav class="prsb-secondary-nav">
+    <ul>
+      <li><a routerLink="/manage-suspension-details-page">Manage Suspension Details</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Stakeholder info display -->
+<div style="padding-top: 3rem; padding-bottom: 3rem;">
+  <!-- SH CPDB Details -->
+  <table class="esea-detail-table prsb-detail-table">
+    <tr>
+      <th colspan="2">Stakeholder's CPDB Details</th>
+    </tr>
+    <tbody>
+      <tr>
+        <td>Stakeholder Number</td>
+        <td>{{stakeholder.stakeholderNumber}}</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>{{stakeholder.stakeholderName}}</td>
+      </tr>
+      <tr>
+        <td>Classification</td>
+        <td>{{stakeholder.stakeholderClassification}}</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>{{stakeholder.stakeholderAddress}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Suspension Details -->
+  <table class="esea-detail-table prsb-detail-table">
+    <tr>
+      <th colspan="2">Suspension Details</th>
+    </tr>
+    <tbody>
+      <tr>
+        <td>Service:</td>
+        <td>dummy data</td>
+      </tr>
+      <tr>
+        <td>Effective Date</td>
+        <td>dummy data</td>
+      </tr>
+      <tr>
+        <td>Suspension Reason:</td>
+        <td>dummy data</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+

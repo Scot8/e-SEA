@@ -1,0 +1,39 @@
+<!-- Application Title and Ministry of Health Logo -->
+<header class="prsb-header">
+
+  <div class="prsb-flex1 prsb-logo" style="margin-left:1rem;">
+    <!-- TODO: get better quality logo img -->
+    <img src="assets/images/ontario_logo_white.png" alt="Government of Ontario" >
+    <h6 class="prsb-logo-text" style="margin-top:10px;">Ministry of Health <br> Ministry of Long-Term Care</h6>
+  </div>
+
+  <div class="prsb-flex3" style="max-width: 75%; text-align: center;">
+    <h5 style="color:white; ">
+      eAccess Service Enrolment Application
+    </h5>
+  </div>
+
+  <div class="prsb-flex1"></div>
+
+</header>
+
+<!-- Primary Navigation -->
+<nav class="prsb-main-nav esea-nav ">
+  <ul>
+    <li><a routerLink="/welcome-page">Home</a></li>
+    <li><a routerLink="/retrieve-service-requestor-page">Service Requestor Level</a></li>
+    <li><a routerLink="/retrieve-service-user-page">Service User Level</a></li>
+    <!-- <li><a routerLink="/validate-certificate-authority-page">Validate Certificate Authority</a></li> -->
+    <li><a routerLink="/retrieve-vendor-details-page">Retrieve Vendor Details</a></li>
+  </ul>
+</nav>
+
+<!-- TODO: Make back button tabbable -->
+<!-- Back Button: Returns to previously visited page. -->
+<ul class="prsb-breadcrumb esea-breadcrumb">
+  <li>
+    <a role="button" (click)="goBack()" class="prsb-blue-link">
+    <span class="material-icons">chevron_left</span>Back</a>
+  </li>
+</ul>
+

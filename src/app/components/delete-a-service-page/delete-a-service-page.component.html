@@ -1,0 +1,65 @@
+<table style="width: 100%">
+  <tr>
+    <td style="text-align: left !important">
+      <h2>Delete a Service</h2>
+    </td>
+    <td style="text-align: right !important">
+      <h5>Stakeholder Number: {{stakeholder.stakeholderNumber}}</h5>
+    </td>
+  </tr>
+</table>
+
+<!-- Secondary Navigation -->
+<div style="max-width: 100%;">
+  <nav class="prsb-secondary-nav">
+    <ul>
+      <li style="width: 28%; text-align: center;"><a routerLink="/service-requestor-details-page">Service Requestor Details</a></li>
+      <li style="width: 20%; text-align: center;"><a routerLink="/manage-services-details-page">Manage Services</a></li>
+      <li style="width: 20%; text-align: center;"><a routerLink="/add-a-service-page">Add a Service</a></li>
+      <li style="width: 20%; text-align: center;"><a routerLink="/end-all-services-page">End all Services</a></li>
+    </ul>
+  </nav>
+</div>
+<span>&nbsp;</span>
+
+<!-- Service Select -->
+<table class="esea-display-table prsb-detail-table">
+  <tr>
+    <!-- Populated with stakeholders active services -->
+    <td><h4>Service:</h4></td>
+    <td colspan="3" style="padding-top:1rem !important;">
+      <select [(ngModel)]="selectedService">
+        <option selected disabled>Select a Service</option>
+        <option *ngFor="let service of stakeholder.stakeholderServices" [ngValue]="service.serviceName">{{ service.serviceName }}</option>
+      </select>
+    </td>
+  </tr>
+
+  <!-- Service Details -->
+  <tbody style="border: 0.5pt solid rgb(180, 180, 180);">
+    <tr>
+      <td style="width: 20%;"><h5>Effective Date:</h5></td>
+      <td>*Effective date of selected service*</td>
+      <td style="width: 20%;"><h5>Access Role:</h5></td>
+      <td>*Access Role of Selected service*</td>
+    </tr>
+
+    <tr>
+      <td style="width: 20%;"><h5>End Date:</h5></td>
+      <td>*End Date*</td>
+      <td style="width: 20%;"><h5>End Reason:</h5></td>
+      <td>*End Reason*</td>
+    </tr>
+  </tbody>
+  <span>&nbsp;</span>
+</table>
+
+<div *ngIf="deleteSuccessful" class="prsb-alert-box prsb-success esea-service-success-alert">
+  <span style="background-color: #e6fad2;" class="material-icons prsb-green md-24" role="img" aria-label="check_circle">check_circle&nbsp;</span>
+  <span style="background-color: #e6fad2;" class="prsb-md-text">Service Deleted Successfully.</span>
+</div>
+
+
+<button (click)="deleteService()">Delete</button>
+
+

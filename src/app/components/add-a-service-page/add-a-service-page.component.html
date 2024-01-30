@@ -1,0 +1,85 @@
+<table style="width: 100%">
+  <tr>
+    <td style="text-align: left !important">
+      <h2>Add a Service</h2>
+    </td>
+    <td style="text-align: right !important">
+      <h5>Stakeholder Number: {{stakeholder.stakeholderNumber}}</h5>
+    </td>
+  </tr>
+</table>
+
+<!-- Secondary Navigation -->
+<div style="max-width: 100%;">
+  <nav class="prsb-secondary-nav">
+    <ul>
+      <li style="width: 28%; text-align: center;"><a routerLink="/service-requestor-details-page">Service Requestor Details</a></li>
+      <li style="width: 20%; text-align: center;"><a routerLink="/manage-services-details-page">Manage Services</a></li>
+      <li style="width: 20%; text-align: center;"><a routerLink="/delete-a-service-page">Delete a Service</a></li>
+      <li style="width: 20%; text-align: center;"><a routerLink="/end-all-services-page">End all Services</a></li>
+    </ul>
+  </nav>
+</div>
+<span>&nbsp;</span>
+
+<!-- Service Select -->
+<table class="esea-display-table prsb-detail-table">
+  <tr>
+    <!-- Populated with stakeholders active services -->
+    <td><h4>Service:</h4></td>
+    <td colspan="3" style="padding-top:1rem !important;">
+      <select [(ngModel)]="selectedService">
+        <option selected disabled>Select a Service</option>
+        <option *ngFor="let service of services" [ngValue]="service">{{ service.serviceName }}</option>
+      </select>
+    </td>
+  </tr>
+
+  <!-- Manage selected service -->
+  <tbody style="border: 0.5pt solid rgb(180, 180, 180);">
+    <tr>
+      <td><h5>Effective Date:</h5></td>
+      <td style="padding-top:1rem !important;">
+        <input type="date" value="{{newServiceEffectiveDate | date: 'yyyy-MM-dd'}}" [(ngModel)]="newServiceEffectiveDate" placeholder="yyyy-MM-dd">
+      </td>
+      <td><h5>Access Role:</h5></td>
+      <td style="padding-top:1rem !important;">
+        <select name="accessRole" id="accessRole">
+          <option selected>Please Select an Access Role</option>
+        </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td><h5>End Date:</h5></td>
+      <td style="padding-top:1rem !important;"><input type="date"></td>
+      <td><h5>End Reason:</h5></td>
+      <td style="padding-top:1rem !important;">
+        <select name="endReason" id="endReason">
+          <option selected>Please Select an End Reason (Select here to clear options)</option>
+          <option value="T01">TERMINATED - ENROLLED IN ERROR</option>
+          <option value="T02">TERMINATED - NO LONGER ACTIVE ON CPDB</option>
+          <option value="T03">TERMINATED - NO LONGER AUTHORIZED FOR E-ACCESS</option>
+          <option value="T04">TERMINATED - NO LONGER AUTHORIZED FOR SERVICE</option>
+          <option value="T05">TERMINATED - CLOSED</option>
+        </select>
+      </td>
+    </tr>
+  </tbody>
+  <span>&nbsp;</span>
+</table>
+
+<!-- Use for validation -->
+<!-- <div *ngIf="serviceAlreadyExists" class="prsb-alert-box prsb-error esea-service-success-alert">
+  <span style="background-color: #FAD2D2;" class="material-icons prsb-red md-24" role="img" aria-label="error">error&nbsp;</span>
+  <span style="background-color: #FAD2D2;" class="prsb-md-text">Stakeholder is already enrolled in that service.</span>
+</div> -->
+
+<div *ngIf="addSuccessful" class="prsb-alert-box prsb-success esea-service-success-alert">
+  <span style="background-color: #e6fad2;" class="material-icons prsb-green md-24" role="img" aria-label="check_circle">check_circle&nbsp;</span>
+  <span style="background-color: #e6fad2;" class="prsb-md-text">Service Added Successfully.</span>
+</div>
+
+
+ <button (click)="addService()">Add</button>
+

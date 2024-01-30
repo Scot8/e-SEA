@@ -1,0 +1,29 @@
+<h2>Retrieve Service User Details</h2>
+
+<div style="display: table;">
+  <div>
+    <div style="display: table-cell;" class="esea-input-div">
+      <label class="prsb-align-text-label" for="stakeholderNo">Stakeholder Number:</label>
+      <input class="prsb-control-input__text prsb-minwidth-240" style="width: 15rem;" type="search" id="stakeholderNo" name="stakeholderNo" [(ngModel)]="stakeholderNo" (ngModelChange)="setStakeholderNo()">
+
+      <!-- Invalid SN warning -->
+      <div *ngIf="!stakeholderNotFound">
+        <br>
+      </div>
+      <div class="prsb-error" *ngIf="stakeholderNotFound">
+        <span style="background-color: #FAD2D2;" class="material-icons prsb-red md-24" role="img" aria-label="error">error&nbsp;</span>
+        <span style="background-color: #FAD2D2;" class="prsb-md-text"> Stakeholder not found.</span>
+      </div>
+      <br *ngIf="stakeholderNotFound">
+
+
+
+
+      <button (click)="getStakeholder()">Retrieve</button>
+    </div>
+
+  </div>
+
+  <!-- For development purposes -->
+  <p style="font-weight: bold;">To proceed to next page, use stakeholder number: 1431409 </p>
+</div>

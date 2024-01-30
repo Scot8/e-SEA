@@ -1,0 +1,103 @@
+/********************
+ESEA SPECIFIC STYLING
+**********************/
+
+.esea-service-success-alert{
+  width: 57rem;
+  max-width: 100%;
+}
+.esea-display-table {
+  border-collapse: collapse;
+  width: 60rem;
+  max-width: 100%;
+}
+
+.esea-detail-table{
+  width: 60rem;
+  max-width: 100%;
+}
+
+.esea-detail-table td{
+  width: 30rem;
+}
+
+.esea-detail-table th{
+  width: 30rem;
+  text-align: left;
+}
+
+.esea-software-vendor-table{
+  width: 60rem;
+  max-width: 100%;
+}
+
+.esea-software-vendor-table td:nth-child(1){
+  width: 10%;
+}
+.esea-software-vendor-table td:nth-child(2){
+  width: 20%;
+}
+.esea-software-vendor-table td:nth-child(3){
+  width: 20%;
+}
+.esea-software-vendor-table td:nth-child(4){
+  width: 50%;
+}
+
+.esea-nav{
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* max-width:80%; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.esea-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+.esea-nav li {
+  float: left;
+}
+
+.esea-nav li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.esea-nav li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.esea-breadcrumb {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.esea-radio-and-label-div{
+  float: left;
+  clear: none;
+}
+
+.esea-label {
+  float: left;
+  clear: none;
+  display: block;
+  padding:6px 1em 0px 8px;
+}
+
+input[type=radio],
+    input.radio {
+      float: left;
+      clear: none;
+      margin: 0 0 0 2px;
+    }
+
+

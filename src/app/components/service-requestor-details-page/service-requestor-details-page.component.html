@@ -1,0 +1,158 @@
+<h2>Stakeholder Information</h2>
+
+<!-- Secondary Navigation -->
+<div style="width: 30rem; max-width: 100%;">
+  <nav class="prsb-secondary-nav">
+    <ul>
+      <li><a routerLink="/manage-eaccess-details-page">Manage e-Access Details</a></li>
+      <li><a routerLink="/manage-services-details-page">Manage Services Details</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+<!-- Java backend test -->
+<!-- <table>
+  <tr *ngFor="let stakeholder of stakeholders">
+    <td>{{stakeholder.stakeholderNumber}}</td>
+    <td>{{stakeholder.stakeholderName}}</td>
+     <td *ngIf="stakeholder.stakeholderServices != null">
+      <ul *ngFor="let service of stakeholder.stakeholderServices">
+        <li>
+          {{service.serviceName}}
+        </li>
+      </ul>
+    </td>
+  </tr>
+
+</table> -->
+
+
+
+<!-- Stakeholder info display -->
+<div style="padding-top: 3rem; padding-bottom: 3rem;">
+  <!-- SH CPDB Details -->
+  <table class="esea-detail-table prsb-detail-table">
+    <tr>
+      <th colspan="2">Stakeholder's CPDB Details</th>
+    </tr>
+    <tbody>
+      <tr>
+        <td>Stakeholder Number</td>
+        <td>{{stakeholder.stakeholderNumber}}</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>{{stakeholder.stakeholderName}}</td>
+      </tr>
+      <tr>
+        <td>Classification</td>
+        <td>{{stakeholder.stakeholderClassification}}</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>{{stakeholder.stakeholderAddress}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Service Enrolment Details -->
+  <table class="esea-detail-table prsb-detail-table">
+    <tr>
+      <th colspan="2">Service Enrolment Details</th>
+    </tr>
+    <!-- If the stakeholder has no services - N/A is displayed in all fields.
+        Otherwise service data is displayed. -->
+    <div *ngIf="stakeholder.stakeholderServices!=null; else noServices" >
+
+      <tbody>
+        <!-- Dropdown selection with each of the Stakeholder's enrolled services.
+             On selection, service details are displayed in fields. -->
+        <tr>
+          <td>Select a Service</td>
+          <td>
+            <select [(ngModel)]="shServices" style="margin:0.1rem ;">
+              <option disabled>Select a Service</option>
+              <option *ngFor="let service of stakeholder.stakeholderServices" [ngValue]="service">{{ service.serviceName }}</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Effective Date</td>
+          <td>
+            <span *ngIf="shServices.effectiveDate == null">N/A</span>
+            <span *ngIf="shServices.effectiveDate != null">{{shServices.effectiveDate}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Access Role</td>
+          <td>
+            <span *ngIf="shServices.accessRole == null">N/A</span>
+            <span *ngIf="shServices.accessRole != null">{{shServices.accessRole}}</span>
+          </td>
+        </tr>
+        <tr >
+          <td>End Date</td>
+          <td>
+            <span *ngIf="shServices.endDate == null">N/A</span>
+            <span *ngIf="shServices.endDate != null">{{shServices.endDate}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td>End Reason</td>
+          <td>
+            <span *ngIf="shServices.endReason == null">N/A</span>
+            <span *ngIf="shServices.endReason != null">{{shServices.endReason}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </div>
+    <ng-template #noServices>
+      <tbody>
+        <tr>
+          <td>Service</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>Effective Date</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>Access Role</td>
+          <td>N/A</td>
+        </tr>
+        <tr >
+          <td>End Date</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td>End Reason</td>
+          <td>N/A</td>
+        </tr>
+      </tbody>
+    </ng-template>
+
+  </table>
+  <!-- e-Access Details -->
+  <table class="esea-detail-table prsb-detail-table">
+    <tr>
+      <th colspan="2">e-Access Details</th>
+    </tr>
+    <tbody>
+      <tr>
+        Distinguished Name:
+        <table>
+          <tr>
+            CN=EBS Test Client, OU=Health Solutions Delivery Branch, O=Health Services I&IT Cluster, L=Kingston, st=ON, C=CA
+          </tr>
+          <tr>
+            CN=EBS Test Client, OU=Health Solutions Delivery Branch, O=Health Services I&IT Cluster, L=Kingston, st=ON, C=CA
+          </tr>
+          <tr>
+            CN=EBS Test Client, OU=Health Solutions Delivery Branch, O=Health Services I&IT Cluster, L=Kingston, st=ON, C=CA
+          </tr>
+        </table>
+      </tr>
+    </tbody>
+  </table>
+</div>
